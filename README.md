@@ -86,11 +86,38 @@ exports['ps-ui']:StatusShow("Area Dominance", {
   "Gang: Ballas",
   "Influence: %100",
 })
+
+TriggerClientEvent('kd-ui:StatusShow', source, 'text here', {
+   'money: $1',
+   'Amount: 500'
+ })
+
+TriggerEvent('kd-ui:StatusShow', 'text here', {
+   'money: $1',
+   'Amount: 500'
+ })
+
 exports['ps-ui']:StatusUpdate("Area Dominance", {
   "Gang: Ballas",
   "Influence: %99",
 })
+
+TriggerClientEvent('kd-ui:StatusUpdate', source, 'text here update', {
+  'money: $2',
+  'Amount: 600'
+})
+
+TriggerEvent('kd-ui:StatusUpdate', 'text here update', {
+  'money: $2',
+  'Amount: 600'
+})
+
 exports['ps-ui']:StatusHide()
+
+TriggerClientEvent('kd-ui:StatusHide', source)
+
+TriggerEvent('kd-ui:StatusHide')
+
 ```
 ![image](https://user-images.githubusercontent.com/7463741/170587637-57217095-29ab-460e-9933-123fb0500e12.png)
 
